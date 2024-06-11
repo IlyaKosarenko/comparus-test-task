@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+task:
+  datasources:
+    -   name: "db"
+        password: password
+        url: jdbc:postgresql://localhost:5432/db
+        username: admin
+        table: users
+        schema: public
+        mapping:
+          id: user_id
+          username: login
+          name: first_name
+          surname: last_name
+    -   name: "db1"
+        password: password
+        url: jdbc:postgresql://localhost:5432/db1
+        username: admin
+        table: table_users
+        schema: schema
+        mapping:
+          id: id
+          username: username
+          name: name
+          surname: surname
+    -   name: "db2"
+        password: password
+        url: jdbc:postgresql://localhost:5432/db2
+        username: admin
+        table: user
+        schema: user_schema
+        mapping:
+          id: id
+          username: username
+          name: name
+          surname: surname
+
